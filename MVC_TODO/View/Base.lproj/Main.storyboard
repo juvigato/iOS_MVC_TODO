@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tor-Mw-ORU">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--To-Do-->
+        <scene sceneID="BTv-T9-bcy">
+            <objects>
+                <tableViewController id="iXJ-iu-f6R" customClass="ToDoTableViewController" customModule="ToDo" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="bJb-OO-7ow">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="taskCell" rowHeight="80" id="PRS-H9-yzX" customClass="TaskTableViewCell" customModule="ToDo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="80"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PRS-H9-yzX" id="U3J-Ha-eOD">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="79.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Título da Task" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IQJ-cc-B6c">
+                                            <rect key="frame" x="20" y="29" width="291" height="32"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HFu-42-fzw" userLabel="Completed Button">
+                                            <rect key="frame" x="330" y="8" width="64" height="64"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="64" id="Sgm-MF-8B2"/>
+                                                <constraint firstAttribute="height" constant="64" id="gaw-hX-CS3"/>
+                                            </constraints>
+                                            <state key="normal" image="todo"/>
+                                            <state key="disabled" image="todo"/>
+                                            <state key="selected" image="completed"/>
+                                            <connections>
+                                                <action selector="changeStatus:" destination="PRS-H9-yzX" eventType="touchUpInside" id="J1M-er-5Ij"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Título da Task" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i3L-sP-khK">
+                                            <rect key="frame" x="20" y="8" width="291" height="17"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="17" id="YYt-u9-ctN"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="HFu-42-fzw" firstAttribute="leading" secondItem="IQJ-cc-B6c" secondAttribute="trailing" constant="19" id="2iA-Rw-Wgw"/>
+                                        <constraint firstItem="i3L-sP-khK" firstAttribute="leading" secondItem="IQJ-cc-B6c" secondAttribute="leading" id="FCW-vp-Eia"/>
+                                        <constraint firstItem="HFu-42-fzw" firstAttribute="leading" secondItem="i3L-sP-khK" secondAttribute="trailing" constant="19" id="Lfk-cM-dnA"/>
+                                        <constraint firstItem="IQJ-cc-B6c" firstAttribute="top" secondItem="i3L-sP-khK" secondAttribute="bottom" constant="4" id="QSY-P1-UoY"/>
+                                        <constraint firstItem="i3L-sP-khK" firstAttribute="top" secondItem="U3J-Ha-eOD" secondAttribute="top" constant="8" id="T8u-zi-Foo"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="IQJ-cc-B6c" secondAttribute="bottom" constant="8" id="Yh3-FH-OjH"/>
+                                        <constraint firstItem="HFu-42-fzw" firstAttribute="centerY" secondItem="U3J-Ha-eOD" secondAttribute="centerY" id="t66-BR-6Jr"/>
+                                        <constraint firstItem="IQJ-cc-B6c" firstAttribute="leading" secondItem="U3J-Ha-eOD" secondAttribute="leadingMargin" id="uHu-OI-1h3"/>
+                                        <constraint firstAttribute="trailing" secondItem="HFu-42-fzw" secondAttribute="trailing" constant="20" id="xcQ-8b-HKN"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="completedButton" destination="HFu-42-fzw" id="ELY-TM-VfH"/>
+                                    <outlet property="titleLable" destination="IQJ-cc-B6c" id="ASQ-bU-290"/>
+                                    <outlet property="userLabel" destination="i3L-sP-khK" id="1SG-Hy-355"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="iXJ-iu-f6R" id="3tn-yP-UaS"/>
+                            <outlet property="delegate" destination="iXJ-iu-f6R" id="WxO-fW-2cX"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="To-Do" id="CNR-n8-F0k">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ks6-Mb-Svs"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="np8-9W-pwt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-486.95652173913049" y="118.52678571428571"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="28P-PM-zqR">
+            <objects>
+                <navigationController id="tor-Mw-ORU" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ihV-pK-e7J">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="iXJ-iu-f6R" kind="relationship" relationship="rootViewController" id="XWp-eF-tnP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xrN-Kf-cuM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1309" y="119"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="completed" width="128" height="128"/>
+        <image name="todo" width="128" height="128"/>
+    </resources>
+</document>
