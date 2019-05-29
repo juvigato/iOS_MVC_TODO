@@ -24,6 +24,7 @@ class TodoDataSource: NSObject, UITableViewDataSource, TaskDelegate {
         return self.tasks.count
     }
     
+    //data source podia ficar na controller por causa dessa proxima func, sa vezes elas se "misturam"
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "taskCell") as? TaskTableViewCell else {
             let cell = UITableViewCell(style: .default, reuseIdentifier: nil)

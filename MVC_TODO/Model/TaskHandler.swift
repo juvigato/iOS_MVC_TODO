@@ -79,9 +79,12 @@ class TaskHandler {
             completion(TaskLoadResponse.error(description: "URL not initiated"))
             return;
         }
-        
+        //uma funcao sem nome, anonima
         URLSession.shared.dataTask(with: url, completionHandler: {(data, response, error) -> Void in
             guard error == nil, let jsonData = data else {
+                //guard o inverso de if let - se esse cara der vdd ele nao entra / data nao e nulo ?
+                //uma vez que entra no guard nao pode sair, por isso tem um return
+                
                 completion(TaskLoadResponse.error(description: "Error to unwrapp data variable"))
                 return
             }

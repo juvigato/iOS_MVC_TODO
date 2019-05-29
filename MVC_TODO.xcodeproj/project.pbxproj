@@ -83,6 +83,7 @@
 		92C3D89C2290FC50001108E9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				92C3D8D022912CB6001108E9 /* TodoDataSource.swift */,
 				92C3D8CB22910782001108E9 /* Persistence */,
 				92C3D89F2290FC99001108E9 /* Task.swift */,
 				92C3D8CC22910DDC001108E9 /* TaskHandler.swift */,
@@ -104,7 +105,6 @@
 			isa = PBXGroup;
 			children = (
 				92C3D88C2290F9A6001108E9 /* ToDoTableController.swift */,
-				92C3D8D022912CB6001108E9 /* TodoDataSource.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
